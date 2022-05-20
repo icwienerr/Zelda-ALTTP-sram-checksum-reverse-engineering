@@ -1,6 +1,8 @@
+import sys
+
 contador=0
 result="0000"
-with open("/home/debian/Downloads/ALttP/zelda.srm", 'rb') as f:
+with open(sys.argv[1], 'rb') as f:
     while contador<=638:
         byte_s = f.read(2)
         if not byte_s:
