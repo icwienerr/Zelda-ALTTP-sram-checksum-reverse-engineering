@@ -15,10 +15,9 @@ The checksum is calculated by subtract with carry all bytes of the slot in the s
 		INX              ; Increment X register
 		INX              ; Increment X register
 		INY              ; Increment Y register
-		CPY	#004FEH/2    ; Compare Y with memory
+		CPY	004FEH/2    ; Compare Y with memory
 		BNE	8973		     ; Branch if not equals to address 0000:8973. This loop repeats for every word in slot. When finished jumps to next instruction
-
-    		STA	02       ; Store A register in work ram address 2
+            STA	02       ; Store A register in work ram address 2
 		LDX	00       ; Load in X register address 0 of work ram
 		LDA	#05A5AH      ; Load #5A5AH in A register
 		SEC              ; Set carry flag
